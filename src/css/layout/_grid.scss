@@ -1,0 +1,33 @@
+.row {
+  margin: 0 auto;
+  padding: 0 3rem;
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-bottom: 8rem;
+    @include respond(tab-port) {
+      margin-bottom: 6rem;
+    }
+  }
+  @include clearfix;
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+
+  .col-1-of-5 {
+    width: calc((100% - 4 * 5rem) / 5);
+    float: left;
+    display: inline-block;
+    margin-right: 4rem;
+    list-style: none;
+    @include respond(tab-port) {
+      margin-right: 0;
+      margin-bottom: 6rem;
+    }
+    @include respond(tab-port) {
+      width: 100% !important;
+    }
+  }
+
+}

@@ -1,0 +1,80 @@
+.beer_card {
+  position: relative;
+  height: 15rem; // ne
+  width: auto;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  display: flex;
+  align-content: space-between;
+  background-color: #fff;
+
+  &__finisher {
+    @include position-central
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  &__text {
+    position: relative;
+    margin-bottom: 2rem;
+    height: 100%;
+    width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    &-header {
+      font-size: 1.6rem;
+      font-weight: 900;
+      margin: auto;
+      text-transform: uppercase;
+      @include initialLetter
+    }
+
+    &-paragraph {
+      font-size: 1.2rem;
+      color: #777;
+      font-style: italic;
+      font-weight: 500;
+      margin: auto;
+    }
+  }
+
+  &__image {
+    height: 13rem;
+    width: 40%;
+    position: relative;
+    margin: auto;
+
+    &-content {
+      height: 100%;
+    }
+  }
+
+  &__miniature {
+    transition: all 0.2s;
+    position: relative;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-4px);
+
+      &:after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(-1px);
+      /*negative to move up the button*/
+    }
+  }
+}

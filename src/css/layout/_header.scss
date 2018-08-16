@@ -1,0 +1,17 @@
+.header {
+  height: 6.2rem;
+  width: 100vw;
+  background-color: #fff;
+  border-bottom: 3px solid #696969;
+  position: relative;
+  margin-bottom: 3rem;
+
+  &__text-box {
+    text-align: center;
+    color: #777;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 0.7rem;
+    @include initialLetter
+  }
+}

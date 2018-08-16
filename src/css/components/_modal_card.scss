@@ -1,0 +1,102 @@
+.modal_card-header {
+  color: #777;
+  font-size: 3rem;
+  font-weight: 800;
+  @include initialLetter
+}
+
+.modal_card-body {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: auto;
+
+  &-imageholder {
+    height: 100%;
+    width: 40%;
+    position: relative;
+    display: block;
+    margin: 0 3rem;
+    padding: 3rem;
+    @include respond(tab-port) {
+      margin: 0 2rem;
+      padding: 7rem 0 1.5rem;
+    }
+  }
+
+  &-textholder {
+    min-height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & > p {
+      color: #777;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    &-content {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+  &-image {
+    max-height: 30rem;
+    @include respond(tab-port) {
+      max-height: 20rem;
+    }
+  }
+}
+
+.modal_card-footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 3rem;
+
+  &-recommendation {
+    width: 100%;
+    border-bottom: 1px solid #696969;
+  }
+
+  &-text {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 3rem;
+
+    &-box {
+      width: 25%;
+      max-height: 15rem;
+      margin: 1rem;
+      color: #777;
+      text-transform: uppercase;
+      font-weight: 800;
+      @include initialLetter;
+
+    }
+  }
+}
+
+.modal_card-box {
+  max-height: 17rem;
+  width: 25%;
+  margin: 1rem;
+  position: relative;
+  border-bottom: 3px solid #696969;
+
+  &-image {
+    padding-top: 2rem;
+    height: 80%;
+    position: relative;
+    margin: 0;
+
+  }
+}
